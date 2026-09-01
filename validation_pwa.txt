@@ -1,0 +1,13 @@
+PWA 静态验证
+============
+PASS  manifest
+PASS  apple_meta
+PASS  install_ui
+PASS  sw_registration
+PASS  store_key
+PASS  checksum
+PASS  manifest JSON
+PASS  icon dimensions: {'icon-192.png': (192, 192), 'icon-512.png': (512, 512), 'icon-maskable-512.png': (512, 512), 'apple-touch-icon.png': (180, 180)}
+PASS  sw.js Node syntax (separate check)
+PASS  HTTP server returned 200 for index/manifest/sw during local static test
+NOTE  本执行环境阻止无头 Chromium 导航，因此无法在此环境完成 install prompt 的端到端浏览器安装测试；代码采用标准 beforeinstallprompt + Service Worker 方案。

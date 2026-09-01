@@ -1,0 +1,16 @@
+最省事的手机安装方式：用 HTTPS 静态托管一次
+=====================================
+
+为什么不能直接点 index.html？
+手机的“HTML 阅读器/文件预览”不是完整浏览器，通常会禁用或限制 JavaScript、localStorage、Service Worker，所以计时、勾选、离线安装等功能会缺失。真正 PWA 需要先用 HTTPS 网页地址打开一次。
+
+GitHub Pages 通用做法：
+1. 新建一个 GitHub 仓库。
+2. 把这个 PWA 文件夹里的文件全部上传到仓库根目录（index.html、manifest.webmanifest、sw.js、icons 文件夹等必须保持相对位置）。
+3. 在仓库 Settings → Pages 中启用 Pages，并选择从 main 分支根目录发布。
+4. 等页面生成 HTTPS 地址后，用手机浏览器访问。
+5. 安卓 Chrome/Edge：点 App 内“设置/备份 → 安装 App”，或浏览器菜单 → 安装应用/添加到主屏幕。
+6. iPhone Safari：分享 → 添加到主屏幕。
+7. 从桌面图标打开；首次缓存完成后，即使暂时没网也能继续用核心功能。
+
+数据仍只存在当前手机本地。请每 3—5 天从“设置/备份”导出 JSON。
